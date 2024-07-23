@@ -1,0 +1,109 @@
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+  background-color: #bcd8da;
+  & > .sign-contain {
+    width: 80%;
+    display: flex;
+    background-color: $primary-color;
+    height: 500px;
+    box-sizing: border-box;
+    & > .sign-up, & > .sign-in {
+        box-sizing: border-box;
+        background-color: $primary-color;
+        width: 50%;
+        padding: 50px 80px;
+        & > h2 {
+        margin-bottom: 20px;
+        margin-left: 50px;
+      }
+      & > .sign-up-form, & > .sign-in-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & > div {
+          border: 2px solid #333;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 80%;
+          padding: 5px;
+          margin: 6px;
+          & > label {
+            font-size: 15px;
+            color: #888;
+          }
+          & > input {
+            width: 85px;
+          }
+        }
+        & > input {
+          margin: 8px 5px;
+          padding: 5px;
+          width: 80%;
+          outline: none;
+          border: 2px solid #666;
+        }
+        & > button {
+          width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          padding: 8px;
+          width: 180px;
+          font-weight: 500;
+          background-color: $secondary-color;
+          color: $primary-color;
+          border: none;
+          border-radius: 3px;
+          &:hover {
+            background-color: rgba($color: $secondary-color, $alpha: 0.9);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    & > .sign-pathfinder {
+        width: 618px;
+        height: 500px;
+        position: absolute;
+        background-color: $secondary-color;
+        background-size: cover;
+        transition: 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > .to-signIn, & > .to-signUp {
+            width: 80%;
+            & > h1 {
+                color: $primary-color;
+                margin-bottom: 20px;
+            }
+            & > p {
+                color: $main-color;
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            & > button {
+                padding: 5px;
+                width: 100px;
+                border: none;
+                border-radius: 3px;
+                font-weight: 500;
+                color: $secondary-color;
+
+                &:hover {
+                    transition: 0.3s;
+                    background-color: lightgray;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.create-recipe {
+    background-color: #F2F5F9;
+    min-height: calc(100vh - 90px);
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    & > .create-recipe-contain {
+        width: 70%;
+        & > h2 {
+            margin-bottom: 50px;
+            color: #333;
+        }
+        & > .create-recipe-form {
+            background-color: $primary-color;
+            padding: 50px;
+            & > div {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+
+                & > label {
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                    color: #444;
+                }
+                & > span {
+                    margin-bottom: 6px;
+                    font-size: 13px;
+                    color: #777;
+                }
+                & > input {
+                    padding: 5px;
+                    outline: none;
+                    border: 2px solid #666;
+                }
+                & > textarea {
+                    padding: 5px;
+                    outline: none;
+                    border: 2px solid #666;
+                    // ScrollCSS
+                    &::-webkit-scrollbar {
+                        width: 8px; 
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: $main-color;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: rgba($color: $secondary-color, $alpha: 0.9);
+                        border-radius: 10px;
+                    }
+                }
+                & > select {
+                    padding: 5px;
+                    outline: none;
+                    border: 2px solid #666;
+                    
+                }
+            }
+            & > button {
+                padding: 12px;
+                width: 180px;
+                font-weight: 500;
+                background-color: $secondary-color;
+                color: $primary-color;
+                border: none;
+                border-radius: 3px;
+                &:hover {
+                    background-color: rgba($color: $secondary-color, $alpha: 0.9);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

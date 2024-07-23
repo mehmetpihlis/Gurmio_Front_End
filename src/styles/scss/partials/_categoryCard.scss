@@ -1,0 +1,19 @@
+.category-card {
+    padding: 20px 10px;
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+
+    &:hover {
+        color: $secondary-color;
+        background-color: lightgray;
+        transition: 0.3s;
+    }
+
+    & > .category-card-info > span {
+        color: gray;
+    }
+}

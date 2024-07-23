@@ -1,0 +1,58 @@
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    color: $secondary-color;
+    box-shadow: 0 0 5px #333;
+    transition: 0.5s;
+  }
+
+  & > .recipe-img {
+    background: $primary-color
+      url("https://i.lezzet.com.tr/images-xxlarge-recipe/klasik_guvec-6c1814bb-3c54-45ae-9160-b011315262ca.jpg")
+      no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+  }
+  & > .recipe-info {
+    padding: 20px 15px;
+    & > p {
+      font-size: 13px;
+      margin-top: 30px;
+      color: #4b4b4b;
+      // new
+      display: -webkit-box; /* Flexbox benzeri bir kutu oluşturur */
+      -webkit-box-orient: vertical; /* Kutu yönünü dikey yapar */
+      overflow: hidden; /* Taşan metni gizler */
+      text-overflow: ellipsis; /* Taşan metni üç nokta ("...") ile gösterir */
+      -webkit-line-clamp: 3; /* Görünecek satır sayısını belirler */
+      line-height: 1.5em; /* Satır yüksekliğini ayarlar */
+      max-height: 4.5em;
+    }
+  }
+
+  & > .recipe-author {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    & > .authorImage {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      margin-right: 10px;
+      background: #333 center center no-repeat;
+      background-size: cover;
+    }
+    & > p {
+      color: #4b4b4b;
+      font-size: 14px;
+    }
+  }
+}
